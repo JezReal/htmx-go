@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/htmx.org@1.9.9"
+            integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<hr>
+<form hx-post="/expense" hx-target="#expenses_list" hx-swap="beforeend">
+    <label for="expense_name">Expense name:</label>
+    <input name="expense_name" id="expense_name" placeholder="Expense name" type="text" required/>
+    <label for="expense_amount">Amount:</label>
+    <input name="expense_amount" id="expense_amount" placeholder="Amount" type="number" required/>
+
+    <button type="submit">Add expense</button>
+</form>
+<hr>
+
+<div id="expenses_list" hx-trigger="load" hx-get="/expenses">
+
+</div>
+</body>
+</html>

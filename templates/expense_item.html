@@ -1,0 +1,9 @@
+<div>
+    <h3>{{.ExpenseName}}</h3>
+    <p>{{.ExpenseAmount}}</p>
+    <button hx-get="/edit/{{.Id}}" hx-target="closest div" hx-swap="outerHTML">Edit</button>
+    <button hx-delete="/delete/{{.Id}}" hx-target="closest div" hx-swap="outerHTML">Delete</button>
+
+    <input type="text" placeholder="Name" name="expense_name" id="expense_name" hx-swap-oob="true"/>
+    <input type="number" placeholder="Amount" name="expense_amount" id="expense_amount" hx-swap-oob="true"/>
+</div>

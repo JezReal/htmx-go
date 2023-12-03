@@ -1,0 +1,11 @@
+<div>
+  <form hx-put="/save/{{.Id}}" hx-target="closest div" hx-swap="outerHTML">
+    <label for="expense_name">Expense name:</label>
+    <input type="text" id="expense_name" name="expense_name" value="{{.ExpenseName}}"/>
+
+    <label for="expense_amount">Amount:</label>
+    <input type="number" id="expense_amount" name="expense_amount" value="{{.ExpenseAmount}}"/>
+
+    <button type="submit">Save</button>
+  </form>
+</div>
