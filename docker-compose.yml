@@ -1,0 +1,5 @@
+services:
+  app:
+    image: 'ghcr.io/jezreal/expense_app'
+    ports:
+      - '8080:8080'
